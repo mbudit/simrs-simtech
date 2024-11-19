@@ -27,4 +27,4 @@ export const createUser = async (user: CreateUserParams) => {
 
         throw error
     }
-}
+};

@@ -21,6 +21,7 @@ export enum FormFieldType {
   DATEPICKER = 'datepicker',
   SELECT = 'select',
   SKELETON = 'skeleton',
+  DATE_PICKER ="date-picker"
 
 }
 

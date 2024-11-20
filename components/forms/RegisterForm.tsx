@@ -58,7 +58,7 @@ const RegisterForm = ({ user }: { user: User }) => {
           <div className="mb-9 space-y-1">
 
           </div>
-          <p className="sub-header">Informasi pribadi</p>
+          <p className="sub-header">Informasi Pribadi</p>
         </section>
 
         <CustomFormField
@@ -137,6 +137,34 @@ const RegisterForm = ({ user }: { user: User }) => {
             label="Pekerjaan"
             placeholder="Karyawan Swasta"
           />
+        </div>
+
+        <div className="flex flex-col gap-5 xl:flex-row">
+          <CustomFormField
+            fieldType={FormFieldType.INPUT}
+            control={form.control}
+            name="namakontakdarurat"
+            label="Nama kontak darurat"
+            placeholder="Asede"
+          />
+          <CustomFormField
+            fieldType={FormFieldType.PHONE_INPUT}
+            control={form.control}
+            name="nohpkontakdarurat"
+            label="Nomor kontak darurat"
+            placeholder="+620812345678"
+          />
+        </div>
+
+        <section className="space-y-6">
+          <div className="mb-9 space-y-1">
+            <h2 className="sub-header">
+              Informasi Medis
+            </h2>
+          </div>
+        </section>
+
+        <div className="flex flex-col gap-5 xl:flex-row">
         </div>
 
         <div className="flex flex-col gap-5 xl:flex-row">

@@ -97,7 +97,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.DATE_PICKER}
             control={form.control}
             name="tanggallahir"
-            label="Tanggal Lahir"
+            label="Tanggal lahir"
             placeholder="johndoe@gmail.com"
             iconSrc="/assets/icons/email.svg"
             iconAlt="email"
@@ -106,7 +106,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.SKELETON}
             control={form.control}
             name="gender"
-            label="Jenis Kelamin"
+            label="Jenis kelamin"
             renderSkeleton={(field) => (
               <FormControl>
                 <RadioGroup className="flex h-11 gap-6 xl:justify-between" onValueChange={field.onChange} defaultValue={field.value}>
@@ -191,8 +191,63 @@ const RegisterForm = ({ user }: { user: User }) => {
         </CustomFormField>
 
         <div className="flex flex-col gap-5 xl:flex-row">
-
+          <CustomFormField
+            fieldType={FormFieldType.INPUT}
+            control={form.control}
+            name="asuransi"
+            label="Asuransi"
+            placeholder="Prudential"
+          />
+          <CustomFormField
+            fieldType={FormFieldType.INPUT}
+            control={form.control}
+            name="noasuransi"
+            label="Nomor asuransi"
+            placeholder="123456789..."
+          />
         </div>
+
+        <div className="flex flex-col gap-5 xl:flex-row">
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={form.control}
+            name="alergi"
+            label="Alergi (apabila ada)"
+            placeholder="Kacang, pollen, debu..."
+          />
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={form.control}
+            name="obatSekarang"
+            label="Current Medication (apabila ada)"
+            placeholder="Ibuprofren 500gr, Paracetamol 500gr"
+          />
+        </div>
+
+        <div className="flex flex-col gap-5 xl:flex-row">
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={form.control}
+            name="riwayatMedisKeluarga"
+            label="Riwayat medis keluarga pasien"
+            placeholder="Ibu sakit diabetes, bapak sakit diabetes"
+          />
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={form.control}
+            name="riwayatMedisPasien"
+            label="Riwayat medis pasien"
+            placeholder="typhus, thypoid"
+          />
+        </div>
+
+        <section className="space-y-6">
+          <div className="mb-9 space-y-1">
+            <h2 className="sub-header">
+              Identifikasi dan Verifikasi
+            </h2>
+          </div>
+        </section>
 
         <div className="flex flex-col gap-5 xl:flex-row">
         </div>

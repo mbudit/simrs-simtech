@@ -19,6 +19,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Select, SelectContent, SelectTrigger, SelectValue } from "./ui/select";
 import { FileDiff } from "lucide-react";
+import { Textarea } from "./ui/textarea";
 
 interface CustomProps {
     control: Control<any>;
@@ -67,7 +68,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
                         />
                     </FormControl>
                 </div>
-            );
+            )
         case FormFieldType.PHONE_INPUT:
             return (
                 <FormControl>
@@ -81,7 +82,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
                         className="input-phone "
                     />
                 </FormControl>
-            );
+            )
         case FormFieldType.DATE_PICKER:
             return (
                 <div className="flex rounded-md border border-dark-500 bg-dark-400">
@@ -103,11 +104,11 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
                         />
                     </FormControl>
                 </div>
-            );
+            )
         case FormFieldType.SKELETON:
             return (
                 renderSkeleton ? renderSkeleton(field) : null
-            );
+            )
         case FormFieldType.SELECT:
             return (
                 <FormControl>
@@ -122,7 +123,18 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
                         </SelectContent>
                     </Select>
                 </FormControl>
-            );
+            )
+        case FormFieldType.TEXTAREA:
+            return (
+                <FormControl>
+                    <Textarea  
+                    placeholder={placeholder}
+                    {...field}
+                    className="shad-textArea"
+                    disabled={props.disabled}
+                    />
+                </FormControl>
+            )
         default:
             break;
     }
